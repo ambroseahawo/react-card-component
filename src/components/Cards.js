@@ -4,18 +4,19 @@ import { articles } from './data'
 
 const Cards = () => {
     return (
-        <div class="container-fluid d-flex justify-content-center">
-            <div class="row g-4">
-                {articles.map(article => {
-                    const {id, imgSrc, description} = article
-                    return(
-                        <div key={id} class="col-md-4">
-                            <Card description={description} imgSrc={imgSrc} />
-                        </div>
-                    )
-                })}
+        <section class="p-5">
+            <div class="container">
+                <div class="row text-center g-4">
+                    {articles.map(article => {
+                        const {id, imgSrc, description} = article
+                        return(
+                            <Card key={id} description={description} imgSrc={imgSrc} />
+                        )
+                    })}
+                </div>
             </div>
-        </div>
+
+        </section>
     )
 }
 
